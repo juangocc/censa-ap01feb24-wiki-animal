@@ -1,2 +1,8 @@
-# censa-ap01feb24-wiki-animal
-Está es una wiki de animales para la materia de Programación Web Básica.
+# Wiki de animales
+- Autor : Juan Gabriel Oyola Cardona
+- Email : juangocc@gmail.com
+- Cel : 3107445925
+- Cod Grupo : AP01Feb24
+- Horario : Sábados PM
+- Materia : Programación Web Básica
+
