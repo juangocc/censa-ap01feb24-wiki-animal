@@ -1,0 +1,125 @@
+:root {
+    --color-black: black;
+    --color-green: #14ad42;
+    --color-dark-green: #0d722b;
+    --color-white: #ffffff;
+}
+
+*,
+::after,
+::before {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:link,
+a:hover,
+a:active {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+.navigation-bar {
+    display: flex;
+    background-color: var(--color-green);
+    padding: 4px;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    img {
+        border-radius: 50%;
+        width: 40px;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 1;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 800;
+    }
+}
+
+.info-section {
+    margin: 10px 40px;
+
+    h1 {
+        margin: 0 0 16px;
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    h2 {
+        margin: 0 0 8px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    p {
+        margin: 0 0 8px;
+        font-size: 16px;
+    }
+
+    p:last-child {
+        margin: 0;
+    }
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: var(--color-green) solid 2px;
+        border-radius: 20px;
+        gap: 8px;
+        overflow: hidden;
+
+        img {
+            margin: 16px;
+            width: 200px;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 1/1.25;
+        }
+
+        figcaption {
+            width: 100%;
+            padding: 8px 16px;
+            background-color: var(--color-green);
+            text-align: center;
+            font-weight: 600;
+            color: var(--color-white);
+        }
+
+        figcaption > a,
+        figcaption > a:visited,
+        figcaption > a:link,
+        figcaption > a:hover,
+        figcaption > a:active {
+            color:inherit;
+        }
+    }
+    .card:hover{
+        border-color: var(--color-dark-green);
+
+        figcaption{
+            background-color: var(--color-dark-green);
+        }
+    }
+}
