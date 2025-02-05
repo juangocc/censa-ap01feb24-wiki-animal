@@ -120,7 +120,72 @@
                     </figure>
                 </div>
             </section>
+            <section class="diapositiva-section">
+                <h2>Diapositiva Animales</h2>
+                    <p>Acontinuación se describen algunos animales.</p>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <div class="numbertext">1 / 3</div>
+                          <img src="img/animales-mamiferos.jpg" style="width:100%">
+                          <div class="text"><strong>Los mamíferos</strong>. Caracterizados por una reproducción vivípara y por alimentar a sus crías con leche materna, los mamíferos son un grupo de animales de sangre caliente y sumamente diverso, en el que tienen cabida desde una jirafa hasta un león o una foca, desde un simio, un alce, un perro o un oso, hasta el propio ser humano.</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">2 / 3</div>
+                          <img src="img/animales-aves.jpg" style="width:100%">
+                          <div class="text"><strong>Las aves.</strong> Descendientes evolutivos de los reptiles de antaño, las aves son las criaturas voladoras más grandes del mundo, cuyos cuerpos de huesos livianos y ahuecados están cubiertos de plumas de diversos colores. Su cabeza cuenta con un pico óseo para alimentarse y con dos patas con garras de distinta envergadura. Pueden ser de hábitos carnívoros, vegetarianos o carroñeros, y muchas de ellas habitan las superficies de los mares, ríos y lagos.</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">3 / 3</div>
+                          <img src="img/animales-reptiles.jpg" style="width:100%">
+                          <div class="text"><strong>Los reptiles.</strong> Animales terrestres en su mayoría, de reproducción ovípara y cuerpo escamado, de sangre fría, alguna vez estos animales gobernaron el mundo. Hoy en día son un grupo diverso, en el que figuran las tortugas, los cocodrilos, las iguanas, las serpientes y otras formas de vida animal similares.</div>
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        
+                        </div>
+                        <br>
+                        
+                        <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                          <span class="dot" onclick="currentSlide(2)"></span> 
+                          <span class="dot" onclick="currentSlide(3)"></span> 
+                        </div>
+                        
+                        <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          let i;
+                          let slides = document.getElementsByClassName("mySlides");
+                          let dots = document.getElementsByClassName("dot");
+                          if (n > slides.length) {slideIndex = 1}    
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";  
+                          dots[slideIndex-1].className += " active";
+                        }
+                        </script>
+                </section>
         </section>
+
     </main>
     <footer>
         <p>&copy; 2025 Wiki Animal. Todos los derechos reservados.</p>
