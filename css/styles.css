@@ -3,6 +3,7 @@
     --color-green: #14ad42;
     --color-dark-green: #0d722b;
     --color-white: #ffffff;
+    --color-dark-green-2: #0aa947;
 }
 
 *,
@@ -64,6 +65,13 @@ a:active {
         font-weight: 700;
     }
 
+    h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--color-dark-green-2);
+    }
+
     p {
         margin: 0 0 8px;
         font-size: 16px;
@@ -107,19 +115,40 @@ a:active {
             color: var(--color-white);
         }
 
-        figcaption > a,
-        figcaption > a:visited,
-        figcaption > a:link,
-        figcaption > a:hover,
-        figcaption > a:active {
-            color:inherit;
+        figcaption>a,
+        figcaption>a:visited,
+        figcaption>a:link,
+        figcaption>a:hover,
+        figcaption>a:active {
+            color: inherit;
         }
     }
-    .card:hover{
+
+    .card:hover {
         border-color: var(--color-dark-green);
 
-        figcaption{
+        figcaption {
             background-color: var(--color-dark-green);
         }
     }
 }
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav a {
+    margin: 0 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+  }
